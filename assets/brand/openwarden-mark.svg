@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">OpenWarden inspection aperture mark</title>
+  <path d="M220 74H86V438H220" fill="none" stroke="#261721" stroke-width="40"/>
+  <path d="M292 74H426V438H292" fill="none" stroke="#B72B5B" stroke-width="40"/>
+  <path d="M256 74V438" fill="none" stroke="#B72B5B" stroke-width="40"/>
+  <path d="M208 256H456" fill="none" stroke="#55E4D2" stroke-width="40"/>
+</svg>

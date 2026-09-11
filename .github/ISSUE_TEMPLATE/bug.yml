@@ -1,0 +1,55 @@
+name: Bug report
+description: Report reproducible incorrect behavior.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include API keys, private prompts, customer data, or sensitive model output.
+  - type: input
+    id: version
+    attributes:
+      label: OpenWarden version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.13"
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Inference surface
+      options:
+        - Responses
+        - Chat Completions
+        - Async client
+        - PyTorch or Transformers
+        - RAG or grounding
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Use placeholders for all credentials and sensitive content.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

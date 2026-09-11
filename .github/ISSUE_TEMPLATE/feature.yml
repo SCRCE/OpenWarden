@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a focused OpenWarden capability.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What concrete guardrail or integration problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility considerations
+      description: Describe affected endpoints, clients, models, or return types.

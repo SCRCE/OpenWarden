@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openwarden"
+dynamic = ["version"]
+description = "Composable guardrails for OpenAI-compatible clients and native PyTorch generation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Ahmad Hammad", email = "Ahmad.Hammad@ieee.org" },
+]
+keywords = [
+  "ai",
+  "ai-safety",
+  "guardrails",
+  "llm",
+  "openai",
+  "pytorch",
+  "rag",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = [
+  "openai>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SCRCE/OpenWarden"
+Documentation = "https://github.com/SCRCE/OpenWarden/tree/main/docs"
+Issues = "https://github.com/SCRCE/OpenWarden/issues"
+Source = "https://github.com/SCRCE/OpenWarden"
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+]
+dev = [
+  "build>=1.2",
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.8",
+  "twine>=5.0",
+]
+
+[tool.hatch.version]
+path = "openwarden/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["openwarden"]
+core-metadata-version = "2.4"
+
+[tool.hatch.build.targets.sdist]
+core-metadata-version = "2.4"
+include = [
+  "/openwarden",
+  "/tests",
+  "/examples",
+  "/docs",
+  "/assets/brand",
+  "/scripts/check_distributions.py",
+  "/README.md",
+  "/LICENSE",
+  "/CHANGELOG.md",
+  "/CONTRIBUTING.md",
+  "/SECURITY.md",
+  "/.env.example",
+  "/pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

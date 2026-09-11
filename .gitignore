@@ -1,0 +1,49 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.env
+!*.env.example
+pypitoken.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.venv/
+venv/
+
+# Builds and generated output
+build/
+dist/
+wheelhouse/
+*.whl
+*.tar.gz
+*.log
+*.jsonl
+
+# Local experiments and generated media
+brag-output*/
+renders/
+snapshots/
+*-response.json
+*-response.txt
+*-events.jsonl
+prompt.txt
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
